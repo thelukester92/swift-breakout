@@ -8,10 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		A340FF7719990945003E4809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7619990945003E4809 /* AppDelegate.swift */; };
-		A340FF7919990945003E4809 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7819990945003E4809 /* ViewController.swift */; };
+		A340FF7919990945003E4809 /* BreakoutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7819990945003E4809 /* BreakoutGame.swift */; };
 		A340FF7C19990945003E4809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A340FF7A19990945003E4809 /* Main.storyboard */; };
 		A340FF7E19990945003E4809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A340FF7D19990945003E4809 /* Images.xcassets */; };
 		A340FF8A19990945003E4809 /* swift_breakoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF8919990945003E4809 /* swift_breakoutTests.swift */; };
+		A340FF941999099A003E4809 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A340FF931999099A003E4809 /* LICENSE */; };
+		A340FF96199909AA003E4809 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A340FF95199909AA003E4809 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +30,14 @@
 		A340FF7119990945003E4809 /* swift-breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-breakout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A340FF7519990945003E4809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A340FF7619990945003E4809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A340FF7819990945003E4809 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A340FF7819990945003E4809 /* BreakoutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGame.swift; sourceTree = "<group>"; };
 		A340FF7B19990945003E4809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A340FF7D19990945003E4809 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A340FF8319990945003E4809 /* swift-breakoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-breakoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A340FF8819990945003E4809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A340FF8919990945003E4809 /* swift_breakoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_breakoutTests.swift; sourceTree = "<group>"; };
+		A340FF931999099A003E4809 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		A340FF95199909AA003E4809 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 		A340FF6819990945003E4809 = {
 			isa = PBXGroup;
 			children = (
+				A340FF95199909AA003E4809 /* README.md */,
+				A340FF931999099A003E4809 /* LICENSE */,
 				A340FF7319990945003E4809 /* swift-breakout */,
 				A340FF8619990945003E4809 /* swift-breakoutTests */,
 				A340FF7219990945003E4809 /* Products */,
@@ -76,7 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				A340FF7619990945003E4809 /* AppDelegate.swift */,
-				A340FF7819990945003E4809 /* ViewController.swift */,
+				A340FF7819990945003E4809 /* BreakoutGame.swift */,
 				A340FF7A19990945003E4809 /* Main.storyboard */,
 				A340FF7D19990945003E4809 /* Images.xcassets */,
 				A340FF7419990945003E4809 /* Supporting Files */,
@@ -158,6 +164,7 @@
 				TargetAttributes = {
 					A340FF7019990945003E4809 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = FUJL25JX4T;
 					};
 					A340FF8219990945003E4809 = {
 						CreatedOnToolsVersion = 6.0;
@@ -189,6 +196,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A340FF941999099A003E4809 /* LICENSE in Resources */,
 				A340FF7C19990945003E4809 /* Main.storyboard in Resources */,
 				A340FF7E19990945003E4809 /* Images.xcassets in Resources */,
 			);
@@ -208,7 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A340FF7919990945003E4809 /* ViewController.swift in Sources */,
+				A340FF96199909AA003E4809 /* README.md in Sources */,
+				A340FF7919990945003E4809 /* BreakoutGame.swift in Sources */,
 				A340FF7719990945003E4809 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +336,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "swift-breakout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -338,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "swift-breakout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
