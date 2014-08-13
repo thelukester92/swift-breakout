@@ -7,35 +7,35 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A32A4B1D199AE6E000A1863E /* LGSwiftEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32A4B1C199AE6E000A1863E /* LGSwiftEngine.framework */; };
+		A32A4B1E199AE6E000A1863E /* LGSwiftEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A32A4B1C199AE6E000A1863E /* LGSwiftEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A340FF7719990945003E4809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7619990945003E4809 /* AppDelegate.swift */; };
 		A340FF7919990945003E4809 /* BreakoutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7819990945003E4809 /* BreakoutGame.swift */; };
-		A340FF7C19990945003E4809 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A340FF7A19990945003E4809 /* Main.storyboard */; };
 		A340FF7E19990945003E4809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A340FF7D19990945003E4809 /* Images.xcassets */; };
-		A340FF8A19990945003E4809 /* swift_breakoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF8919990945003E4809 /* swift_breakoutTests.swift */; };
 		A340FF941999099A003E4809 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A340FF931999099A003E4809 /* LICENSE */; };
-		A340FF96199909AA003E4809 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = A340FF95199909AA003E4809 /* README.md */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		A340FF8419990945003E4809 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A340FF6919990945003E4809 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A340FF7019990945003E4809;
-			remoteInfo = "swift-breakout";
+/* Begin PBXCopyFilesBuildPhase section */
+		A32A4B1F199AE6E100A1863E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A32A4B1E199AE6E000A1863E /* LGSwiftEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A32A4B1C199AE6E000A1863E /* LGSwiftEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = LGSwiftEngine.framework; path = "/Users/Luke/Library/Developer/Xcode/DerivedData/swift-workspace-fhhkxfkewjkseibguecjabdndrit/Build/Products/Debug-iphoneos/LGSwiftEngine.framework"; sourceTree = "<absolute>"; };
 		A340FF7119990945003E4809 /* swift-breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-breakout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A340FF7519990945003E4809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A340FF7619990945003E4809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A340FF7819990945003E4809 /* BreakoutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGame.swift; sourceTree = "<group>"; };
-		A340FF7B19990945003E4809 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A340FF7D19990945003E4809 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		A340FF8319990945003E4809 /* swift-breakoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-breakoutTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A340FF8819990945003E4809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A340FF8919990945003E4809 /* swift_breakoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_breakoutTests.swift; sourceTree = "<group>"; };
 		A340FF931999099A003E4809 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A340FF95199909AA003E4809 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -45,26 +45,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A340FF8019990945003E4809 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				A32A4B1D199AE6E000A1863E /* LGSwiftEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A32A4B20199AE6E500A1863E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A32A4B1C199AE6E000A1863E /* LGSwiftEngine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A340FF6819990945003E4809 = {
 			isa = PBXGroup;
 			children = (
 				A340FF95199909AA003E4809 /* README.md */,
 				A340FF931999099A003E4809 /* LICENSE */,
 				A340FF7319990945003E4809 /* swift-breakout */,
-				A340FF8619990945003E4809 /* swift-breakoutTests */,
+				A32A4B20199AE6E500A1863E /* Frameworks */,
 				A340FF7219990945003E4809 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -73,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				A340FF7119990945003E4809 /* swift-breakout.app */,
-				A340FF8319990945003E4809 /* swift-breakoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -83,7 +84,6 @@
 			children = (
 				A340FF7619990945003E4809 /* AppDelegate.swift */,
 				A340FF7819990945003E4809 /* BreakoutGame.swift */,
-				A340FF7A19990945003E4809 /* Main.storyboard */,
 				A340FF7D19990945003E4809 /* Images.xcassets */,
 				A340FF7419990945003E4809 /* Supporting Files */,
 			);
@@ -98,23 +98,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		A340FF8619990945003E4809 /* swift-breakoutTests */ = {
-			isa = PBXGroup;
-			children = (
-				A340FF8919990945003E4809 /* swift_breakoutTests.swift */,
-				A340FF8719990945003E4809 /* Supporting Files */,
-			);
-			path = "swift-breakoutTests";
-			sourceTree = "<group>";
-		};
-		A340FF8719990945003E4809 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				A340FF8819990945003E4809 /* Info.plist */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -125,6 +108,7 @@
 				A340FF6D19990945003E4809 /* Sources */,
 				A340FF6E19990945003E4809 /* Frameworks */,
 				A340FF6F19990945003E4809 /* Resources */,
+				A32A4B1F199AE6E100A1863E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,24 +118,6 @@
 			productName = "swift-breakout";
 			productReference = A340FF7119990945003E4809 /* swift-breakout.app */;
 			productType = "com.apple.product-type.application";
-		};
-		A340FF8219990945003E4809 /* swift-breakoutTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = A340FF9019990945003E4809 /* Build configuration list for PBXNativeTarget "swift-breakoutTests" */;
-			buildPhases = (
-				A340FF7F19990945003E4809 /* Sources */,
-				A340FF8019990945003E4809 /* Frameworks */,
-				A340FF8119990945003E4809 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				A340FF8519990945003E4809 /* PBXTargetDependency */,
-			);
-			name = "swift-breakoutTests";
-			productName = "swift-breakoutTests";
-			productReference = A340FF8319990945003E4809 /* swift-breakoutTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -165,10 +131,6 @@
 					A340FF7019990945003E4809 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = FUJL25JX4T;
-					};
-					A340FF8219990945003E4809 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = A340FF7019990945003E4809;
 					};
 				};
 			};
@@ -186,7 +148,6 @@
 			projectRoot = "";
 			targets = (
 				A340FF7019990945003E4809 /* swift-breakout */,
-				A340FF8219990945003E4809 /* swift-breakoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -197,15 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A340FF941999099A003E4809 /* LICENSE in Resources */,
-				A340FF7C19990945003E4809 /* Main.storyboard in Resources */,
 				A340FF7E19990945003E4809 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A340FF8119990945003E4809 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,40 +169,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A340FF96199909AA003E4809 /* README.md in Sources */,
 				A340FF7919990945003E4809 /* BreakoutGame.swift in Sources */,
 				A340FF7719990945003E4809 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A340FF7F19990945003E4809 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A340FF8A19990945003E4809 /* swift_breakoutTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		A340FF8519990945003E4809 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = A340FF7019990945003E4809 /* swift-breakout */;
-			targetProxy = A340FF8419990945003E4809 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		A340FF7A19990945003E4809 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A340FF7B19990945003E4809 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		A340FF8B19990945003E4809 /* Debug */ = {
@@ -337,6 +262,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/swift-workspace-fhhkxfkewjkseibguecjabdndrit/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "swift-breakout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -349,43 +279,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(USER_LIBRARY_DIR)/Developer/Xcode/DerivedData/swift-workspace-fhhkxfkewjkseibguecjabdndrit/Build/Products/Debug-iphoneos",
+				);
 				INFOPLIST_FILE = "swift-breakout/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
-		A340FF9119990945003E4809 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "swift-breakoutTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-breakout.app/swift-breakout";
-			};
-			name = Debug;
-		};
-		A340FF9219990945003E4809 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = "swift-breakoutTests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-breakout.app/swift-breakout";
 			};
 			name = Release;
 		};
@@ -408,14 +309,7 @@
 				A340FF8F19990945003E4809 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-		};
-		A340FF9019990945003E4809 /* Build configuration list for PBXNativeTarget "swift-breakoutTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A340FF9119990945003E4809 /* Debug */,
-				A340FF9219990945003E4809 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
