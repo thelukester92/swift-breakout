@@ -7,6 +7,7 @@
 //
 
 import LGSwiftEngine
+import UIKit
 
 class PaddleSystem: LGSystem
 {
@@ -34,7 +35,7 @@ class PaddleSystem: LGSystem
 		body		= LGPhysicsBody(size: SIZE, dynamic: false)
 		aimer		= BallAimer()
 		
-		let paddle = LGEntity( position, sprite, body, aimer )
+		let paddle = LGEntity( position, sprite, body )
 		scene.addEntity(paddle)
 	}
 }

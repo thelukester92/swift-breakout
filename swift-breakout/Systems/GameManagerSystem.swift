@@ -29,7 +29,7 @@ class GameManagerSystem: LGSystem
 	func createGameState()
 	{
 		gameState = GameState()
-		scene.addEntity( LGEntity(gameState), named: "gameState" )
+		scene.addEntity( LGEntity(gameState) )
 	}
 	
 	func checkGameOverConditions()

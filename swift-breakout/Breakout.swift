@@ -19,7 +19,8 @@ class Breakout: LGGame
 			BrickSystem(rows: 4, cols: 8),
 			BallSystem(),
 			PaddleSystem(),
-			GameManagerSystem()
+			DamageSystem()
+			// GameManagerSystem()
 		)
 	}
 }

@@ -32,8 +32,8 @@ class BrickSystem: LGSystem
 	
 	override func initialize()
 	{
-		let originX = scene.view.frame.size.width / 2 - (SIZE.x + PADDING.x) * cols / 2
-		let originY = scene.view.frame.size.height - (SIZE.y + PADDING.y) * rows - 40
+		let originX = Double(scene.view.frame.size.width) / 2 - (SIZE.x + PADDING.x) * Double(cols) / 2
+		let originY = Double(scene.view.frame.size.height) - (SIZE.y + PADDING.y) * Double(rows) - 40
 		
 		origin = LGVector(x: originX, y: originY)
 		
@@ -70,7 +70,7 @@ class BrickSystem: LGSystem
 		let y = origin.y + Double(row) * (SIZE.y + PADDING.y)
 		
 		let body = LGPhysicsBody(width: SIZE.x, height: SIZE.y, dynamic: false)
-		body.didCollide = { self.brickCollided($0) }
+		body.didCollide = { entity, other in self.brickCollided(entity) }
 		
 		let brick = LGEntity(
 			body,

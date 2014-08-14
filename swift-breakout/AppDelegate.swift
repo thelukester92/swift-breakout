@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate
 	
 	func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool
 	{
-		let viewController = BreakoutGame()
+		let viewController = Breakout()
 		
 		window = UIWindow(frame: UIScreen.mainScreen().bounds)
 		window.rootViewController = viewController

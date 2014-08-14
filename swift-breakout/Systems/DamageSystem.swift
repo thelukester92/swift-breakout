@@ -12,7 +12,7 @@ class DamageSystem: LGSystem
 {
 	var damageables = [Damageable]()
 	
-	override func accepts(entity: LGEntity)
+	override func accepts(entity: LGEntity) -> Bool
 	{
 		return entity.has(Damageable)
 	}
@@ -36,7 +36,7 @@ class DamageSystem: LGSystem
 			if damageables[i].health <= 0
 			{
 				scene.removeEntity(entities[i])
-			{
+			}
 		}
 	}
 }

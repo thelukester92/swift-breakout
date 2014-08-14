@@ -7,13 +7,15 @@
 //
 
 import LGSwiftEngine
+import Foundation
 
 class BallSystem: LGSystem
 {
 	let SIZE			= LGVector(x: 20, y: 20)
-	let START_POSITION	= LGVector(x: 40, y: 40)
-	let START_VELOCITY	= LGVector(x: 1, y: -1)
+	let START_POSITION	= LGVector(x: 40, y: 100)
+	let START_VELOCITY	= LGVector(x: 2, y: -2)
 	
+	var balls		= [LGEntity]()
 	var positions	= [LGPosition]()
 	var bodies		= [LGPhysicsBody]()
 	var velocities	= [LGVector]()
@@ -39,7 +41,7 @@ class BallSystem: LGSystem
 	
 	override func remove(index: Int)
 	{
-		ballRemoved(entities[index])
+		ballRemoved(balls[index])
 		super.remove(index)
 		
 		positions.removeAtIndex(index)
@@ -49,7 +51,7 @@ class BallSystem: LGSystem
 	
 	override func update()
 	{
-		for i in 0 ..< entities.count
+		for i in 0 ..< balls.count
 		{
 			checkBounds(i)
 			updateVelocity(i)
@@ -72,7 +74,7 @@ class BallSystem: LGSystem
 			LGSprite(red: 1, green: 1, blue: 0, size: SIZE)
 		)
 		
-		entities.append(ball)
+		balls.append(ball)
 		
 		positions.append(position)
 		bodies.append(body)
@@ -88,28 +90,28 @@ class BallSystem: LGSystem
 	
 	func checkBounds(id: Int)
 	{
-		if positions[id].x < 0
+		if positions[id].x < 1
 		{
 			positions[id].x = 1
 			bodies[id].collidedLeft = true
 			bounce(id)
 		}
-		else if positions[id].x + bodies[id].width > scene.view.frame.size.width
+		else if positions[id].x + bodies[id].width + 1 > Double(scene.view.frame.size.width)
 		{
-			positions[id].x = scene.view.frame.size.width - bodies[id].width - 1
+			positions[id].x = Double(scene.view.frame.size.width) - bodies[id].width - 1
 			bodies[id].collidedRight = true
 			bounce(id)
 		}
 		
-		if positions[id].y + bodies[id].height > scene.view.frame.size.height
+		if positions[id].y + bodies[id].height + 1 > Double(scene.view.frame.size.height)
 		{
-			positions[id].y = scene.view.frame.size.height - bodies[id].height - 1
+			positions[id].y = Double(scene.view.frame.size.height) - bodies[id].height - 1
 			bodies[id].collidedTop = true
 			bounce(id)
 		}
 		else if positions[id].y + bodies[id].height < 0
 		{
-			scene.removeEntity(entities[id])
+			scene.removeEntity(balls[id])
 		}
 	}
 	
@@ -123,8 +125,10 @@ class BallSystem: LGSystem
 	
 	func ballCollided(ball: LGEntity, withEntity entity: LGEntity?)
 	{
-		let id = entityIndex(ball)
-		bounce(id, entity: entity)
+		if let id = entityIndex(ball)
+		{
+			bounce(id, entity: entity)
+		}
 	}
 	
 	func ballRemoved(ball: LGEntity)
@@ -167,9 +171,9 @@ class BallSystem: LGSystem
 			
 			let interpolation	= (ballCenterX - aimerX) / aimerWidth
 			
-			let regionPosition	= interpolation * Double(aimer.deltas.count)
+			var regionPosition	= interpolation * Double(aimer.deltas.count)
 			regionPosition		= max(regionPosition, 0)
-			regionPosition		= min(regionPosition, aimer.deltas.count - 1)
+			regionPosition		= min(regionPosition, Double(aimer.deltas.count) - 1)
 			
 			let leftSide		= Int(floor(regionPosition))
 			let rightSide		= Int(ceil(regionPosition))
@@ -182,16 +186,16 @@ class BallSystem: LGSystem
 	
 	// MARK: Helper Functions
 	
-	func entityIndex(entity: LGEntity) -> Int
+	func entityIndex(entity: LGEntity) -> Int?
 	{
-		for i in 0..< entities.count
+		for i in 0 ..< balls.count
 		{
-			if entities[i] === entity
+			if balls[i] === entity
 			{
 				return i
 			}
 		}
 		
-		return -1
+		return nil
 	}
 }

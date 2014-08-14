@@ -7,10 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A32A4B1D199AE6E000A1863E /* LGSwiftEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A32A4B1C199AE6E000A1863E /* LGSwiftEngine.framework */; };
-		A32A4B1E199AE6E000A1863E /* LGSwiftEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A32A4B1C199AE6E000A1863E /* LGSwiftEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A329EE25199C021600FFA06C /* Breakout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE24199C021600FFA06C /* Breakout.swift */; };
+		A329EE30199C022B00FFA06C /* BallAimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE27199C022B00FFA06C /* BallAimer.swift */; };
+		A329EE31199C022B00FFA06C /* Damageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE28199C022B00FFA06C /* Damageable.swift */; };
+		A329EE32199C022B00FFA06C /* GameState.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE29199C022B00FFA06C /* GameState.swift */; };
+		A329EE33199C022B00FFA06C /* BallSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE2B199C022B00FFA06C /* BallSystem.swift */; };
+		A329EE34199C022B00FFA06C /* BrickSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE2C199C022B00FFA06C /* BrickSystem.swift */; };
+		A329EE35199C022B00FFA06C /* DamageSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE2D199C022B00FFA06C /* DamageSystem.swift */; };
+		A329EE36199C022B00FFA06C /* GameManagerSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE2E199C022B00FFA06C /* GameManagerSystem.swift */; };
+		A329EE37199C022B00FFA06C /* PaddleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE2F199C022B00FFA06C /* PaddleSystem.swift */; };
+		A329EE3D199C02E700FFA06C /* LGSwiftEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A329EE3C199C02E700FFA06C /* LGSwiftEngine.framework */; };
+		A329EE3E199C02E700FFA06C /* LGSwiftEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A329EE3C199C02E700FFA06C /* LGSwiftEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A340FF7719990945003E4809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7619990945003E4809 /* AppDelegate.swift */; };
-		A340FF7919990945003E4809 /* BreakoutGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7819990945003E4809 /* BreakoutGame.swift */; };
 		A340FF7E19990945003E4809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A340FF7D19990945003E4809 /* Images.xcassets */; };
 		A340FF941999099A003E4809 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A340FF931999099A003E4809 /* LICENSE */; };
 /* End PBXBuildFile section */
@@ -22,7 +30,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A32A4B1E199AE6E000A1863E /* LGSwiftEngine.framework in Embed Frameworks */,
+				A329EE3E199C02E700FFA06C /* LGSwiftEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,11 +38,19 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		A32A4B1C199AE6E000A1863E /* LGSwiftEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = LGSwiftEngine.framework; path = "/Users/Luke/Library/Developer/Xcode/DerivedData/swift-workspace-fhhkxfkewjkseibguecjabdndrit/Build/Products/Debug-iphoneos/LGSwiftEngine.framework"; sourceTree = "<absolute>"; };
+		A329EE24199C021600FFA06C /* Breakout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breakout.swift; sourceTree = "<group>"; };
+		A329EE27199C022B00FFA06C /* BallAimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallAimer.swift; sourceTree = "<group>"; };
+		A329EE28199C022B00FFA06C /* Damageable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Damageable.swift; sourceTree = "<group>"; };
+		A329EE29199C022B00FFA06C /* GameState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameState.swift; sourceTree = "<group>"; };
+		A329EE2B199C022B00FFA06C /* BallSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallSystem.swift; sourceTree = "<group>"; };
+		A329EE2C199C022B00FFA06C /* BrickSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BrickSystem.swift; sourceTree = "<group>"; };
+		A329EE2D199C022B00FFA06C /* DamageSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DamageSystem.swift; sourceTree = "<group>"; };
+		A329EE2E199C022B00FFA06C /* GameManagerSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManagerSystem.swift; sourceTree = "<group>"; };
+		A329EE2F199C022B00FFA06C /* PaddleSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddleSystem.swift; sourceTree = "<group>"; };
+		A329EE3C199C02E700FFA06C /* LGSwiftEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = LGSwiftEngine.framework; path = "/Users/Luke/Library/Developer/Xcode/DerivedData/swift-workspace-fhhkxfkewjkseibguecjabdndrit/Build/Products/Debug-iphoneos/LGSwiftEngine.framework"; sourceTree = "<absolute>"; };
 		A340FF7119990945003E4809 /* swift-breakout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-breakout.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A340FF7519990945003E4809 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A340FF7619990945003E4809 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A340FF7819990945003E4809 /* BreakoutGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreakoutGame.swift; sourceTree = "<group>"; };
 		A340FF7D19990945003E4809 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A340FF931999099A003E4809 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A340FF95199909AA003E4809 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
@@ -45,17 +61,39 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A32A4B1D199AE6E000A1863E /* LGSwiftEngine.framework in Frameworks */,
+				A329EE3D199C02E700FFA06C /* LGSwiftEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A32A4B20199AE6E500A1863E /* Frameworks */ = {
+		A329EE26199C022B00FFA06C /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				A32A4B1C199AE6E000A1863E /* LGSwiftEngine.framework */,
+				A329EE27199C022B00FFA06C /* BallAimer.swift */,
+				A329EE28199C022B00FFA06C /* Damageable.swift */,
+				A329EE29199C022B00FFA06C /* GameState.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A329EE2A199C022B00FFA06C /* Systems */ = {
+			isa = PBXGroup;
+			children = (
+				A329EE2B199C022B00FFA06C /* BallSystem.swift */,
+				A329EE2C199C022B00FFA06C /* BrickSystem.swift */,
+				A329EE2D199C022B00FFA06C /* DamageSystem.swift */,
+				A329EE2E199C022B00FFA06C /* GameManagerSystem.swift */,
+				A329EE2F199C022B00FFA06C /* PaddleSystem.swift */,
+			);
+			path = Systems;
+			sourceTree = "<group>";
+		};
+		A329EE3B199C02B200FFA06C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A329EE3C199C02E700FFA06C /* LGSwiftEngine.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -66,7 +104,7 @@
 				A340FF95199909AA003E4809 /* README.md */,
 				A340FF931999099A003E4809 /* LICENSE */,
 				A340FF7319990945003E4809 /* swift-breakout */,
-				A32A4B20199AE6E500A1863E /* Frameworks */,
+				A329EE3B199C02B200FFA06C /* Frameworks */,
 				A340FF7219990945003E4809 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -82,8 +120,10 @@
 		A340FF7319990945003E4809 /* swift-breakout */ = {
 			isa = PBXGroup;
 			children = (
+				A329EE26199C022B00FFA06C /* Components */,
+				A329EE2A199C022B00FFA06C /* Systems */,
 				A340FF7619990945003E4809 /* AppDelegate.swift */,
-				A340FF7819990945003E4809 /* BreakoutGame.swift */,
+				A329EE24199C021600FFA06C /* Breakout.swift */,
 				A340FF7D19990945003E4809 /* Images.xcassets */,
 				A340FF7419990945003E4809 /* Supporting Files */,
 			);
@@ -169,7 +209,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A340FF7919990945003E4809 /* BreakoutGame.swift in Sources */,
+				A329EE37199C022B00FFA06C /* PaddleSystem.swift in Sources */,
+				A329EE30199C022B00FFA06C /* BallAimer.swift in Sources */,
+				A329EE35199C022B00FFA06C /* DamageSystem.swift in Sources */,
+				A329EE25199C021600FFA06C /* Breakout.swift in Sources */,
+				A329EE32199C022B00FFA06C /* GameState.swift in Sources */,
+				A329EE33199C022B00FFA06C /* BallSystem.swift in Sources */,
+				A329EE36199C022B00FFA06C /* GameManagerSystem.swift in Sources */,
+				A329EE34199C022B00FFA06C /* BrickSystem.swift in Sources */,
+				A329EE31199C022B00FFA06C /* Damageable.swift in Sources */,
 				A340FF7719990945003E4809 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
