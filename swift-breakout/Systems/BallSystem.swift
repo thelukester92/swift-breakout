@@ -9,6 +9,9 @@
 import LGSwiftEngine
 import Foundation
 
+// TODO: the whole problem is that entity types aren't lining up with accepts
+// the problem is that the system is no longer alerted when the entity is removed
+
 class BallSystem: LGSystem
 {
 	let SIZE			= LGVector(x: 20, y: 20)
@@ -81,6 +84,8 @@ class BallSystem: LGSystem
 		velocities.append(LGVector())
 		
 		scene.addEntity(ball)
+		
+		gameState?.balls++
 	}
 	
 	func createBall(#x: Double, y: Double)
@@ -175,12 +180,7 @@ class BallSystem: LGSystem
 			regionPosition		= max(regionPosition, 0)
 			regionPosition		= min(regionPosition, Double(aimer.deltas.count) - 1)
 			
-			let leftSide		= Int(floor(regionPosition))
-			let rightSide		= Int(ceil(regionPosition))
-			
-			let velocityDelta	= (1 - regionPosition) * aimer.deltas[leftSide] + regionPosition * aimer.deltas[rightSide]
-			
-			bodies[id].velocity.x += velocityDelta
+			bodies[id].velocity.x += aimer.deltas[Int(regionPosition)]
 		}
 	}
 	

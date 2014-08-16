@@ -28,6 +28,7 @@ class GameManagerSystem: LGSystem
 	
 	func createGameState()
 	{
+		// TODO: move this somewhere that will be called before initialize()
 		gameState = GameState()
 		scene.addEntity( LGEntity(gameState) )
 	}
@@ -39,10 +40,12 @@ class GameManagerSystem: LGSystem
 			if gameState.balls == 0
 			{
 				println("You lose!")
+				gameState.gameOver = true
 			}
 			else if gameState.bricks == 0
 			{
 				println("You win!")
+				gameState.gameOver = true
 			}
 		}
 	}
