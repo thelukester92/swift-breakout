@@ -58,6 +58,7 @@ class BrickSystem: LGSystem
 	
 	override func remove(index: Int)
 	{
+		// TODO: Note that entities contains things that don't match accepts. "changed" may remove legit things.
 		brickRemoved(entities[index])
 		super.remove(index)
 	}

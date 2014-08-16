@@ -35,7 +35,7 @@ class PaddleSystem: LGSystem
 		body		= LGPhysicsBody(size: SIZE, dynamic: false)
 		aimer		= BallAimer()
 		
-		let paddle = LGEntity( position, sprite, body )
+		let paddle = LGEntity( position, sprite, body, aimer )
 		scene.addEntity(paddle)
 	}
 }
