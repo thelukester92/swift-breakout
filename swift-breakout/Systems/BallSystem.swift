@@ -18,7 +18,6 @@ class BallSystem: LGSystem
 	let START_POSITION	= LGVector(x: 40, y: 100)
 	let START_VELOCITY	= LGVector(x: 2, y: -2)
 	
-	var balls		= [LGEntity]()
 	var positions	= [LGPosition]()
 	var bodies		= [LGPhysicsBody]()
 	var velocities	= [LGVector]()
@@ -29,22 +28,31 @@ class BallSystem: LGSystem
 	
 	override func initialize()
 	{
+		// TODO: Don't make this method depend on GameManagerSystem.initialize...
+		gameState = scene.entityNamed("gameState")?.get(GameState)
+		
 		createBall(x: START_POSITION.x, y: START_POSITION.y)
 	}
 	
 	override func accepts(entity: LGEntity) -> Bool
 	{
-		return entity.has(GameState)
+		return entity.has(Ball) && entity.has(LGPosition) && entity.has(LGPhysicsBody)
 	}
 	
 	override func add(entity: LGEntity)
 	{
-		gameState = entity.get(GameState)
+		super.add(entity)
+		
+		positions.append(entity.get(LGPosition)!)
+		bodies.append(entity.get(LGPhysicsBody)!)
+		velocities.append(LGVector())
+		
+		gameState?.balls++
 	}
 	
 	override func remove(index: Int)
 	{
-		ballRemoved(balls[index])
+		ballRemoved(entities[index])
 		super.remove(index)
 		
 		positions.removeAtIndex(index)
@@ -54,7 +62,7 @@ class BallSystem: LGSystem
 	
 	override func update()
 	{
-		for i in 0 ..< balls.count
+		for i in 0 ..< entities.count
 		{
 			checkBounds(i)
 			updateVelocity(i)
@@ -65,27 +73,18 @@ class BallSystem: LGSystem
 	
 	func createBall(#x: Double, y: Double, velocity: LGVector)
 	{
-		let position = LGPosition(x: x, y: y)
-		
 		let body = LGPhysicsBody(size: SIZE)
 		body.didCollide = { self.ballCollided($0, withEntity: $1) }
 		body.velocity = LGVector(x: velocity.x, y: velocity.y)
 		
 		let ball = LGEntity(
-			position,
 			body,
-			LGSprite(red: 1, green: 1, blue: 0, size: SIZE)
+			LGPosition(x: x, y: y),
+			LGSprite(red: 1, green: 1, blue: 0, size: SIZE),
+			Ball()
 		)
 		
-		balls.append(ball)
-		
-		positions.append(position)
-		bodies.append(body)
-		velocities.append(LGVector())
-		
 		scene.addEntity(ball)
-		
-		gameState?.balls++
 	}
 	
 	func createBall(#x: Double, y: Double)
@@ -116,7 +115,7 @@ class BallSystem: LGSystem
 		}
 		else if positions[id].y + bodies[id].height < 0
 		{
-			scene.removeEntity(balls[id])
+			scene.removeEntity(entities[id])
 		}
 	}
 	
@@ -188,9 +187,9 @@ class BallSystem: LGSystem
 	
 	func entityIndex(entity: LGEntity) -> Int?
 	{
-		for i in 0 ..< balls.count
+		for i in 0 ..< entities.count
 		{
-			if balls[i] === entity
+			if entities[i] === entity
 			{
 				return i
 			}

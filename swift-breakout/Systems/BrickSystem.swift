@@ -32,6 +32,9 @@ class BrickSystem: LGSystem
 	
 	override func initialize()
 	{
+		// TODO: Don't make this method depend on GameManagerSystem.initialize...
+		gameState = scene.entityNamed("gameState")?.get(GameState)
+		
 		let originX = Double(scene.view.frame.size.width) / 2 - (SIZE.x + PADDING.x) * Double(cols) / 2
 		let originY = Double(scene.view.frame.size.height) - (SIZE.y + PADDING.y) * Double(rows) - 40
 		
@@ -48,17 +51,17 @@ class BrickSystem: LGSystem
 	
 	override func accepts(entity: LGEntity) -> Bool
 	{
-		return entity.has(GameState)
+		return entity.has(Brick)
 	}
 	
 	override func add(entity: LGEntity)
 	{
-		gameState = entity.get(GameState)
+		super.add(entity)
+		gameState?.bricks++
 	}
 	
 	override func remove(index: Int)
 	{
-		// TODO: Note that entities contains things that don't match accepts. "changed" may remove legit things.
 		brickRemoved(entities[index])
 		super.remove(index)
 	}
@@ -77,13 +80,11 @@ class BrickSystem: LGSystem
 			body,
 			LGPosition(x: x, y: y),
 			LGSprite(red: 0, green: 0, blue: 1, size: SIZE),
+			Brick(),
 			Damageable()
 		)
 		
-		entities.append(brick)
 		scene.addEntity(brick)
-		
-		gameState?.bricks++
 	}
 	
 	// MARK: Event Handlers

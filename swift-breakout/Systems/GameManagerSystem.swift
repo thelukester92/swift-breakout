@@ -19,6 +19,16 @@ class GameManagerSystem: LGSystem
 		createGameState()
 	}
 	
+	override func accepts(entity: LGEntity) -> Bool
+	{
+		return entity.has(GameState)
+	}
+	
+	override func add(entity: LGEntity)
+	{
+		gameState = entity.get(GameState)
+	}
+	
 	override func update()
 	{
 		checkGameOverConditions()
@@ -29,8 +39,7 @@ class GameManagerSystem: LGSystem
 	func createGameState()
 	{
 		// TODO: move this somewhere that will be called before initialize()
-		gameState = GameState()
-		scene.addEntity( LGEntity(gameState) )
+		scene.addEntity( LGEntity(GameState()), named: "gameState" )
 	}
 	
 	func checkGameOverConditions()

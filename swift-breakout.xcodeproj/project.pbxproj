@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A317C72F19A24E79008E8F80 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317C72E19A24E79008E8F80 /* Ball.swift */; };
+		A317C73119A251D4008E8F80 /* Brick.swift in Sources */ = {isa = PBXBuildFile; fileRef = A317C73019A251D4008E8F80 /* Brick.swift */; };
 		A329EE25199C021600FFA06C /* Breakout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE24199C021600FFA06C /* Breakout.swift */; };
 		A329EE30199C022B00FFA06C /* BallAimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE27199C022B00FFA06C /* BallAimer.swift */; };
 		A329EE31199C022B00FFA06C /* Damageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE28199C022B00FFA06C /* Damageable.swift */; };
@@ -38,6 +40,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		A317C72E19A24E79008E8F80 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		A317C73019A251D4008E8F80 /* Brick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Brick.swift; sourceTree = "<group>"; };
 		A329EE24199C021600FFA06C /* Breakout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Breakout.swift; sourceTree = "<group>"; };
 		A329EE27199C022B00FFA06C /* BallAimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallAimer.swift; sourceTree = "<group>"; };
 		A329EE28199C022B00FFA06C /* Damageable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Damageable.swift; sourceTree = "<group>"; };
@@ -71,7 +75,9 @@
 		A329EE26199C022B00FFA06C /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				A317C72E19A24E79008E8F80 /* Ball.swift */,
 				A329EE27199C022B00FFA06C /* BallAimer.swift */,
+				A317C73019A251D4008E8F80 /* Brick.swift */,
 				A329EE28199C022B00FFA06C /* Damageable.swift */,
 				A329EE29199C022B00FFA06C /* GameState.swift */,
 			);
@@ -209,10 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A317C72F19A24E79008E8F80 /* Ball.swift in Sources */,
 				A329EE37199C022B00FFA06C /* PaddleSystem.swift in Sources */,
 				A329EE30199C022B00FFA06C /* BallAimer.swift in Sources */,
 				A329EE35199C022B00FFA06C /* DamageSystem.swift in Sources */,
 				A329EE25199C021600FFA06C /* Breakout.swift in Sources */,
+				A317C73119A251D4008E8F80 /* Brick.swift in Sources */,
 				A329EE32199C022B00FFA06C /* GameState.swift in Sources */,
 				A329EE33199C022B00FFA06C /* BallSystem.swift in Sources */,
 				A329EE36199C022B00FFA06C /* GameManagerSystem.swift in Sources */,
