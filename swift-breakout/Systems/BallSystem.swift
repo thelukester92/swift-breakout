@@ -132,6 +132,9 @@ class BallSystem: LGSystem
 		if let id = entityIndex(ball)
 		{
 			bounce(id, entity: entity)
+			
+			let sound = LGEntity(LGSound(name: "bounce.wav"))
+			scene.addEntity(sound)
 		}
 	}
 	

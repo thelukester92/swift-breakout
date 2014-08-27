@@ -98,5 +98,8 @@ class BrickSystem: LGSystem
 	{
 		gameState?.bricks--
 		gameState?.score++
+		
+		let sound = LGEntity(LGSound(name: "break.wav"))
+		scene.addEntity(sound)
 	}
 }

@@ -17,6 +17,7 @@ class Breakout: LGGame
 		// TODO: make order not important... right now, BallSystem.initialize depends on GameManagerSystem.initialize
 		scene.addSystems(
 			GameManagerSystem(),
+			LGSoundSystem(),
 			LGPhysicsSystem(gravity: LGVector(x: 0, y: 0)),
 			LGRenderingSystem(),
 			BrickSystem(rows: 4, cols: 8),

@@ -23,6 +23,8 @@
 		A340FF7719990945003E4809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7619990945003E4809 /* AppDelegate.swift */; };
 		A340FF7E19990945003E4809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A340FF7D19990945003E4809 /* Images.xcassets */; };
 		A340FF941999099A003E4809 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A340FF931999099A003E4809 /* LICENSE */; };
+		A3F01F6C19AE4BF000C4F505 /* bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3F01F6B19AE4BF000C4F505 /* bounce.wav */; };
+		A3F01F6E19AE4E1E00C4F505 /* break.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3F01F6D19AE4E1E00C4F505 /* break.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -58,6 +60,8 @@
 		A340FF7D19990945003E4809 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A340FF931999099A003E4809 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A340FF95199909AA003E4809 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A3F01F6B19AE4BF000C4F505 /* bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bounce.wav; sourceTree = "<group>"; };
+		A3F01F6D19AE4E1E00C4F505 /* break.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = break.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 				A340FF7619990945003E4809 /* AppDelegate.swift */,
 				A329EE24199C021600FFA06C /* Breakout.swift */,
 				A340FF7D19990945003E4809 /* Images.xcassets */,
+				A3F01F5C19AE434F00C4F505 /* Resources */,
 				A340FF7419990945003E4809 /* Supporting Files */,
 			);
 			path = "swift-breakout";
@@ -142,6 +147,15 @@
 				A340FF7519990945003E4809 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3F01F5C19AE434F00C4F505 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A3F01F6B19AE4BF000C4F505 /* bounce.wav */,
+				A3F01F6D19AE4E1E00C4F505 /* break.wav */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -203,8 +217,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3F01F6E19AE4E1E00C4F505 /* break.wav in Resources */,
 				A340FF941999099A003E4809 /* LICENSE in Resources */,
 				A340FF7E19990945003E4809 /* Images.xcassets in Resources */,
+				A3F01F6C19AE4BF000C4F505 /* bounce.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
