@@ -54,7 +54,7 @@ extension PaddleSystem: LGTouchObserver
 	
 	func touchesEnded(touches: NSSet!, withEvent event: UIEvent!)
 	{
-		if event.allTouches().count - touches.count == 0
+		if event.allTouches()!.count - touches.count == 0
 		{
 			body.velocity.x = 0
 		}

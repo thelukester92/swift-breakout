@@ -23,6 +23,7 @@
 		A340FF7719990945003E4809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7619990945003E4809 /* AppDelegate.swift */; };
 		A340FF7E19990945003E4809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A340FF7D19990945003E4809 /* Images.xcassets */; };
 		A340FF941999099A003E4809 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A340FF931999099A003E4809 /* LICENSE */; };
+		A3E443AA19C4B76C00567F18 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E443A919C4B76C00567F18 /* GameScene.swift */; };
 		A3F01F6C19AE4BF000C4F505 /* bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3F01F6B19AE4BF000C4F505 /* bounce.wav */; };
 		A3F01F6E19AE4E1E00C4F505 /* break.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3F01F6D19AE4E1E00C4F505 /* break.wav */; };
 /* End PBXBuildFile section */
@@ -60,6 +61,7 @@
 		A340FF7D19990945003E4809 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		A340FF931999099A003E4809 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		A340FF95199909AA003E4809 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		A3E443A919C4B76C00567F18 /* GameScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		A3F01F6B19AE4BF000C4F505 /* bounce.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = bounce.wav; sourceTree = "<group>"; };
 		A3F01F6D19AE4E1E00C4F505 /* break.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = break.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				A329EE26199C022B00FFA06C /* Components */,
+				A3E443A819C4B76200567F18 /* Scenes */,
 				A329EE2A199C022B00FFA06C /* Systems */,
 				A340FF7619990945003E4809 /* AppDelegate.swift */,
 				A329EE24199C021600FFA06C /* Breakout.swift */,
@@ -147,6 +150,14 @@
 				A340FF7519990945003E4809 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A3E443A819C4B76200567F18 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				A3E443A919C4B76C00567F18 /* GameScene.swift */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		A3F01F5C19AE434F00C4F505 /* Resources */ = {
@@ -239,6 +250,7 @@
 				A317C73119A251D4008E8F80 /* Brick.swift in Sources */,
 				A329EE32199C022B00FFA06C /* GameState.swift in Sources */,
 				A329EE33199C022B00FFA06C /* BallSystem.swift in Sources */,
+				A3E443AA19C4B76C00567F18 /* GameScene.swift in Sources */,
 				A329EE36199C022B00FFA06C /* GameManagerSystem.swift in Sources */,
 				A329EE34199C022B00FFA06C /* BrickSystem.swift in Sources */,
 				A329EE31199C022B00FFA06C /* Damageable.swift in Sources */,

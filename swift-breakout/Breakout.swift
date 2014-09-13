@@ -12,19 +12,9 @@ import LGSwiftEngine
 class Breakout: LGGame
 {
 	// TODO: rename "addSystems" to "initialize" and remove "addEntities" completely
-	override func addSystems(scene: LGScene)
+	override func createScenes()
 	{
-		// TODO: make order not important... right now, BallSystem.initialize depends on GameManagerSystem.initialize
-		scene.addSystems(
-			GameManagerSystem(),
-			LGSoundSystem(),
-			LGPhysicsSystem(gravity: LGVector(x: 0, y: 0)),
-			LGRenderingSystem(),
-			BrickSystem(rows: 4, cols: 8),
-			BallSystem(),
-			PaddleSystem(),
-			DamageSystem()
-		)
+		addScene(GameScene.self, named: "game")
 	}
 	
 	// MARK: UIViewController Overrides
