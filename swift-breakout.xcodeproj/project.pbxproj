@@ -18,24 +18,24 @@
 		A329EE35199C022B00FFA06C /* DamageSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE2D199C022B00FFA06C /* DamageSystem.swift */; };
 		A329EE36199C022B00FFA06C /* GameManagerSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE2E199C022B00FFA06C /* GameManagerSystem.swift */; };
 		A329EE37199C022B00FFA06C /* PaddleSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = A329EE2F199C022B00FFA06C /* PaddleSystem.swift */; };
-		A329EE3D199C02E700FFA06C /* LGSwiftEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A329EE3C199C02E700FFA06C /* LGSwiftEngine.framework */; };
-		A329EE3E199C02E700FFA06C /* LGSwiftEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A329EE3C199C02E700FFA06C /* LGSwiftEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A340FF7719990945003E4809 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A340FF7619990945003E4809 /* AppDelegate.swift */; };
 		A340FF7E19990945003E4809 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A340FF7D19990945003E4809 /* Images.xcassets */; };
 		A340FF941999099A003E4809 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = A340FF931999099A003E4809 /* LICENSE */; };
+		A38106CF19C8BB4D0028A43E /* LGSwiftEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A329EE3C199C02E700FFA06C /* LGSwiftEngine.framework */; };
+		A38106D019C8BB4D0028A43E /* LGSwiftEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A329EE3C199C02E700FFA06C /* LGSwiftEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A3E443AA19C4B76C00567F18 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3E443A919C4B76C00567F18 /* GameScene.swift */; };
 		A3F01F6C19AE4BF000C4F505 /* bounce.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3F01F6B19AE4BF000C4F505 /* bounce.wav */; };
 		A3F01F6E19AE4E1E00C4F505 /* break.wav in Resources */ = {isa = PBXBuildFile; fileRef = A3F01F6D19AE4E1E00C4F505 /* break.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		A32A4B1F199AE6E100A1863E /* Embed Frameworks */ = {
+		A38106D119C8BB4D0028A43E /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				A329EE3E199C02E700FFA06C /* LGSwiftEngine.framework in Embed Frameworks */,
+				A38106D019C8BB4D0028A43E /* LGSwiftEngine.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -71,7 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A329EE3D199C02E700FFA06C /* LGSwiftEngine.framework in Frameworks */,
+				A38106CF19C8BB4D0028A43E /* LGSwiftEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -179,7 +179,7 @@
 				A340FF6D19990945003E4809 /* Sources */,
 				A340FF6E19990945003E4809 /* Frameworks */,
 				A340FF6F19990945003E4809 /* Resources */,
-				A32A4B1F199AE6E100A1863E /* Embed Frameworks */,
+				A38106D119C8BB4D0028A43E /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
